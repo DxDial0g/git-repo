@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+			<script type = "text/javascript" src = "js/hideShowFunction.js"></script>	
+			<script type = "text/javascript" src = "js/loadContentFunction.js"></script>
+			<script type = "text/javascript" src = "js/ajax.js"></script>
+			<script type = "text/javascript" src = "js/jquery-2.1.3.js"></script>
+			<link rel = "import" href = "templates/register.html" id = "linkRegister">
+		</head>
+		<body onload = "load('includedContent', 'linkRegister', 'templateContent');">	
+			<div id = "includedContent">				
+			<label class = "Appearance">Login
+				<form name = "frmLogin">	
+					<div id = "emailWarnings"></div>				
+					<input type="text" class = "Text" id = "txtEmail" value = "Email" onfocus = "hS(this.id,'Email');" onblur = "hS(this.id, 'Email');"/>
+					<div id = "passWarning"></div>
+					<input type="password" class = "Text" id = "txtPw" value = "Password" onfocus = "hS(this.id, 'Password');" onblur = "hS(this.id, 'Password');"/><br>
+					<button value = "Start" class = "Button" onClick = "AJAXLogin($, 'txtEmail', 'txtPw', 'divId');">Start</button>					
+				</form>
+			</label>
+			</div>
+		</body>
+	</html>
